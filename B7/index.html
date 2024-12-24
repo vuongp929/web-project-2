@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B7 Angular</title>
+    <link href="../bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f05adaac80.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="myController">
+        <div class="form mt-5">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Name</span>
+                <input type="text" class="form-control" placeholder="Name" ng-model="name">
+                <span ng-if="statusErrorName">{{ messageErrorName }}</span>
+            </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Address</span>
+                <input type="text" class="form-control" placeholder="Address" ng-model="address">
+                <span ng-if="statusErrorAddress">{{ messageErrorAddress }}</span>
+            </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Phone number</span>
+                <input type="text" class="form-control" placeholder="Phone number" ng-model="phone">
+                <span ng-if="statusErrorPhone">{{ messageErrorPhone }}</span>
+            </div>
+            <button ng-click="myFun()">Thêm dữ liệu</button>
+            <button ng-if="indexUpdate > -1" ng-click="editStudent()">Sửa dữ liệu</button>
+            <button ng-if="indexUpdate > -1" ng-click="comeBack()">Quay lại</button>
+
+        </div>
+        <table border="1">
+        <thead>
+            <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>address</td>
+            <td>phone</td>
+        </tr>
+        </thead>
+        
+        <tbody ng-repeat="(index, value) in students">
+            <tr>
+            <td>{{ value.id }}</td>
+            <td>{{ value.name }}</td>
+            <td>{{ value.address }}</td>
+            <td>{{ value.phone }}</td>
+            <td>
+                <button class="btn btn-warning" ng-click="updateStudent(index)"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button class="btn btn-danger" ng-click="removeStudent(index)"><i class="fas fa-trash"></i></button>
+            </td>
+            
+        </tr>
+        </tbody>
+        
+      </table>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="../bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

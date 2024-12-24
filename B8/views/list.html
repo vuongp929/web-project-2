@@ -1,0 +1,29 @@
+<h1>{{ title }}</h1>
+
+<a href="#!/add-post">Thêm mới</a>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>userId</th>
+            <th>id</th>
+            <th>title</th>
+            <th>body</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody ng-repeat="value in data">
+        <tr>
+            <td>{{ value.userName }}</td>
+            <td>{{ value.id }}</td>
+            <td>{{ value.title }}</td>
+            <td>{{ value.body }}</td>
+            <td>
+                <a href="#!/detail-post/{{ value.id }}">Chi tiết</a>
+                <a href="#!/update-post/{{ value.id }}">Sửa</a>
+
+                <button ng-click="btnDelete(value.id)">Xóa</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

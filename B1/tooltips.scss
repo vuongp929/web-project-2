@@ -1,0 +1,18 @@
+@import 'variables';
+
+.tooltip {
+  font-size: $tooltip-font-size;
+  max-width: $tooltip-max-width;
+  color: $tooltip-color;
+  background-color: $tooltip-bg;
+  border-radius: $tooltip-border-radius;
+  opacity: $tooltip-opacity;
+  padding: $tooltip-padding-y $tooltip-padding-x;
+  margin: $tooltip-margin;
+
+  &::before {
+    content: '';
+    border-width: $tooltip-arrow-height $tooltip-arrow-width;
+    border-color: $tooltip-arrow-color;
+  }
+}

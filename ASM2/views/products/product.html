@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop</title>
+    <link href="../bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f05adaac80.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+      .card img{
+        width: auto;
+        height: 170px;
+        padding: 5px;
+      }
+      .card{
+        width: 300px;
+        height: 350px;
+      }
+    </style>
+</head>
+<body ng-app="myApp">
+  <div ng-controller="myController">
+<div class="container-xxl">
+    
+    <nav class="navbar navbar-expand-lg bg-danger bg-gradient">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <i class="fa-solid fa-house"></i>
+          CellphoneS
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <i class="fa-solid fa-mobile"></i>
+                Điện thoại
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="product.html" tabindex="-1" aria-disabled="true">
+                <i class="fa-solid fa-house"></i>
+                Laptop
+              </a>
+            </li>
+            
+          </ul>
+          <div class="d-flex">
+            <li class="nav-item" style="list-style-type: none;">
+              <a class="nav-link disabled" href="# " tabindex="-1" aria-disabled="true">
+                <i class="fa-solid fa-truck-fast"></i>
+                Đơn hàng
+              </a>
+            </li>
+
+            <li class="nav-item dropdown" style="list-style-type: none;">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i> Đăng nhập</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-sign-hanging"></i> Đăng ký</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-note-sticky"></i> Tra cứu thông tin</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-shield-halved"></i> Quên mật khẩu</a></li>
+              </ul>
+            </li>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main row" >
+      <h3>Tất cả sản phẩm</h3>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-3" ng-repeat="(index, value) in products">
+            <div class="card mb-4">
+              <img ng-src="{{ value.image }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ value.name }}
+            </h5>
+            <p class="card-text">
+              {{ value.price }}
+            </p>
+            <a href="product-detail.html?id={{value.id}}" class="btn btn-primary">Chi tiết sản phẩm</a>
+          </div>
+            </div>
+          </div>
+      </div>
+      </div>
+
+    </div>
+
+    <div class="row" style="position: fixed;
+                            left: 0; 
+                            right: 0;
+                            bottom: 0;
+                            ">
+      <div class="col-12  bg-gradient">
+          <nav class="navbar navbar-expand-lg navbar-light bg-danger bg-gradient">
+              <div class="container-fluid">
+                  <a class="navbar-brand" href="#">CellphoneS</a>   
+                  
+                  <div class="d-flex" style="width: 100px;">
+                    <a href="https://www.facebook.com" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"
+                    aria-current="page">
+                      <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Youtube">
+                      <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://x.com/home?lang=vi" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="top" title="X">
+                      <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                  </div>
+                  
+                </div>
+              </div>
+            </nav>
+      </div>
+    </div>    
+
+</div>
+<script src="main.js"></script>
+<script src="../bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B6 Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myController">
+        <p>{{ welcome }}</p>
+
+
+        <div ng-controller="child">
+            <p>{{welcome}}</p>
+            <p>{{$parent.welcome}}</p>
+        </div>
+    </div>
+
+    <div ng-controller="block1">
+        {{ data }}
+    </div>
+    <div ng-controller="block2">
+        {{ data }}
+    </div>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>

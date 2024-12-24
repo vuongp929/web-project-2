@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B6 Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myController">
+        A: <input type="text" placeholder="Số A" ng-model="soA">
+        B: <input type="text" placeholder="Số B" ng-model="soB">
+        <hr>
+        <button ng-click="myFun()">Tính tổng</button>
+        <p>Kết quả: {{ tong }}</p>
+    </div>
+
+    <script src="index2.js"></script>
+    
+</body>
+</html>

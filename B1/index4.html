@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buoi 1-2</title>
+    <link href="../bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f05adaac80.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+<div class="container-xxl">
+    <div class="header row">
+        <div class="col-12">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="../images/banner1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../images/asus-banner2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/ROG-Banner.webp" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg bg-danger bg-gradient">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="fa-solid fa-house"></i>
+          CellphoneS
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <i class="fa-solid fa-mobile"></i>
+                Điện thoại
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="# " tabindex="-1" aria-disabled="true">
+                <i class="fa-solid fa-house"></i>
+                Laptop
+              </a>
+            </li>
+            
+          </ul>
+          <div class="d-flex">
+            <li class="nav-item" style="list-style-type: none;">
+              <a class="nav-link disabled" href="# " tabindex="-1" aria-disabled="true">
+                <i class="fa-solid fa-truck-fast"></i>
+                Đơn hàng
+              </a>
+            </li>
+
+            <li class="nav-item dropdown" style="list-style-type: none;">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i> Đăng nhập</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-sign-hanging"></i> Đăng ký</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-note-sticky"></i> Tra cứu thông tin</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-shield-halved"></i> Quên mật khẩu</a></li>
+              </ul>
+            </li>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+ <div class="mt-5">  
+<div class="row justify-content-md-center">
+  <div class="col-3">
+    <div class="card">
+      <div class="input-group p-3 ">
+      <input type="text" class="form-control shadow-lg bg-body rounded" placeholder="Search..." aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </div>
+    
+  <ul class="list-group mt-5">
+    <li class="list-group-item d-flex -between align-items-center list-group-item-dark">
+      <i class="fa-solid fa-bars m-1"></i>Chủng loại 
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Điện thoại di động
+      <span class="badge bg-secondary">5</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Máy tính xác tay
+      <span class="badge bg-secondary">3</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Máy tính để bàn
+      <span class="badge bg-secondary">7</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Quạt máy
+      <span class="badge bg-secondary">9</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Tivi
+      <span class="badge bg-secondary">11</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Tủ lạnh
+      <span class="badge bg-secondary">15</span>
+    </li>
+  </ul>  
+</div>
+
+
+    <div class="col-8 ps-5">
+        <nav class="mb-4">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Xem thêm sản phẩm</button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Vị trí cửa hàng</button>
+        </div>
+      </nav>
+      
+      <div class="tab-content " id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <!--phone info-->  
+        <div class="justify-content-md-center">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img src="../images/asus-rog.jpg" class="img-fluid m-3" alt="...">
+            </div>
+            <div class="col-md-4">
+              <div class="card-body">
+              <ul>
+                <li>Tên hàng: Asus ROG Strix <span class="badge bg-info text-dark">VNA</span></li>
+                <li>Đơn giá: <span class="badge bg-danger">27.000.000 VNĐ</span></li>
+                <li>Nhà cung cấp: Asus</li>
+                <li>Hàng mới nhập</li>
+                <li>Hàng mới nhập còn: <span class="badge bg-warning text-dark">5</span>Chiếc</li>
+                <li>Giảm giá: <span class="badge bg-danger">5%</span></li>
+              </ul>
+              
+              <!--mua hang-->
+              <button type="button" class="btn bg-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Mua hàng
+              </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Điền thông tin đơn hàng</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <!--Form-->
+                            <label for="basic-url" class="form-label">Tên khách hàng</label>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text" >Họ và tên</span>
+                              <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <label for="basic-url" class="form-label">Email</label>
+                            <div class="input-group mb-3">
+                              <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                              <span class="input-group-text">@example.com</span>
+                            </div>
+                            
+                            <label for="basic-url" class="form-label">Khu vực</label>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon3">Chọn khu vực giao hàng</span>
+                              <input type="text" class="form-control" placeholder="--Chọn khu vực" aria-describedby="basic-addon3">
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Xác nhận</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              <!--trả góp-->
+              <button type="button" class="btn bg-info" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                Trả góp
+              </button>
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <span class="badge bg-danger">Tính năng này chưa hỗ trợ</span>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" mb-3">
+          <div class="card-body">
+            <h1 class="card-title">Mô tả sản phẩm</h1>
+            <p class="card-text">
+              Asus ROG Strix G531 là dòng laptop gaming với cách thiết kế tối giản nhưng vẫn mang đến trải nghiệm cốt lõi mãnh liệt nhất, dư sức để người dùng chơi những tựa game nặng và hoàn thành dễ dàng nhiều công việc  trên Windows 10 Home. Máy được trang bị bộ vi xử lý Intel Core i5/i7 mới nhất , đồ họa lên đến RTX™ giúp Asus G531 mang lại hiệu năng chơi game cực kì thuyết phục tới đông đảo giới game thủ.  Sản phẩm có  màu xám kim loại và đặc biệt gây ấn tượng  khi kết hợp với những đường phây xước tinh tế ,  đẹp mắt. 
+            </p>
+            
+            <p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Xem thêm
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                Chả có gì ở đây
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        </div>
+        <div class="tab-pane fade mb-5" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <!--map-->  
+          <h1>Địa chỉ cửa hàng đại lý</h1>
+        <div id="map"></div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+</div>     
+
+    <div class="row">
+        <div class="col-12  bg-gradient">
+            <nav class="navbar navbar-expand-lg navbar-light bg-danger bg-gradient">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">CellphoneS</a>   
+                    
+                    <div class="d-flex" style="width: 100px;">
+                      <a href="https://www.facebook.com" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"
+                      aria-current="page">
+                        <i class="fa-brands fa-facebook"></i>
+                      </a>
+                      <a href="https://www.youtube.com" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a href="https://x.com/home?lang=vi" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="top" title="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                      </a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>    
+
+</div>
+<script src="../bootstrap.bundle.min.js"></script>
+<script src="../popper.min.js"></script>
+<script>
+  document.getElementById('nav-profile-tab').addEventListener('shown.bs.tab', function () {
+      if (!window.mapInitialized) {
+          var map = L.map('map').setView([21.037063527647327, 105.7893237251997], 15);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(map);
+          
+          L.marker([21.037063527647327, 105.7893237251997]).addTo(map)
+              .bindPopup('Vị trí này.<br> Tọa độ: 21.037063527647327, 105.7893237251997')
+              .openPopup();
+          window.mapInitialized = true; 
+      }
+  });
+</script>
+
+</body>
+</html>

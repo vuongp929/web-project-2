@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B6 Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myController">
+       Bán kính: <input type="text" placeholder="Bán kính" ng-model="bkinh">
+       <button ng-click="myFun()">Tính toán</button> 
+
+    </div>
+    <div ng-controller="myController2">
+       <p>Chu vi hình tròn: {{ chuvi }}</p>
+       <p>Diện tính hình tròn: {{ dientich }}</p>
+    
+    </div>
+
+    <script src="index3.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Danh Mục</title>
+    <link href="../bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">{{ title }}</h1>
+        <form>
+            <div class="mb-3">
+                <label for="categoryName" class="form-label">Tên Danh Mục</label>
+                <input type="text" class="form-control" id="categoryName" placeholder="Nhập tên danh mục" ng-model="category.name" required>
+            </div>
+            <button class="btn btn-primary" ng-click="addCategory()" type="button">Thêm mới</button>
+            <a href="#!/list" class="btn btn-secondary">Quay lại</a>
+        </form>
+    </div>
+    <script src="../bootstrap.bundle.min.js"></script>
+</body>
+</html>

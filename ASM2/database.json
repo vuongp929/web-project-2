@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "id": "0488",
+      "name": "Thiên tài bên trái Kẻ điên bên phải",
+      "price": 999,
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1630313960l/50908574.jpg",
+      "categogy_id": "",
+      "category_id": "d17d",
+      "userId": "asdg"
+    }
+  ],
+  "category": [
+    {
+      "id": "asdg",
+      "name": "ASUS"
+    },
+    {
+      "id": "ghfg",
+      "name": "ádasda"
+    },
+    {
+      "id": "d17d",
+      "name": "gì đó"
+    },
+    {
+      "id": "a4cc",
+      "name": "mới"
+    },
+    {
+      "id": "324c",
+      "name": "TESTING"
+    }
+  ]
+}

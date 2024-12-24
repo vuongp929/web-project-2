@@ -1,0 +1,25 @@
+<h1>{{ title }}</h1>
+<form>
+    <div>
+        <label>User Id</label>
+        <select ng-model="post.userId">
+            <option value="" hidden>--Chọn User</option>
+            <option ng-repeat="user in users" value="{{ user.id }}">
+                {{ user.name }}
+            </option>
+        </select>
+        <span ng-if="errStatusUserId">
+            {{ errMesUserId }}
+        </span>
+    </div>
+    <div>
+        <label>Title</label>
+        <input type="text" placeholder="title" ng-model="post.title">
+    </div>
+    <div>
+        <label>Body</label>
+        <textarea placeholder="Body" ng-model="post.body"></textarea>
+    </div>
+    <button ng-click="addPost()" type="button">Thêm mới</button>
+    <a href="#!/">Quay lai</a>
+</form>

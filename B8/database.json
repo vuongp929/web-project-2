@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": "d242",
+      "userId": "1",
+      "title": "sdvâcs",
+      "body": "sdvsdvcác"
+    },
+    {
+      "id": "cc25",
+      "userId": "1",
+      "title": "wqqwe",
+      "body": "eqweqw"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Long"
+    },
+    {
+      "id": "2",
+      "name": "Hoàng"
+    }
+  ]
+}

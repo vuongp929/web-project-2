@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Sản Phẩm</title>
+    <!-- Bootstrap CSS -->
+    <link href="../bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">{{ title }}</h1>
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Brand</label>
+                <select class="form-select" ng-model="products.userId">
+                    <option value="" hidden>--Chọn User--</option>
+                    <option ng-repeat="cate in category" value="{{ cate.id }}">
+                        {{ cate.name }}
+                    </option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" placeholder="Enter product name" ng-model="products.name">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Price</label>
+                <input type="number" class="form-control" placeholder="Enter product price" ng-model="products.price">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Image</label>
+                <div class="mb-2">
+                    <img ng-src="{{ products.image }}" class="img-thumbnail" style="width: 150px;">
+                </div>
+                <input type="text" class="form-control" placeholder="Enter image URL" ng-model="products.image">
+            </div>
+
+            <button class="btn btn-success" ng-click="updateProduct()" type="button">Chỉnh sửa</button>
+            <a href="#!/" class="btn btn-secondary">Quay lại</a>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="../bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

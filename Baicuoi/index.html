@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myController">
+
+        <h1>Bài 1</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Ngày sinh</th>
+                <th>Lương</th>
+                <th>Giới thiệu</th>
+                <th>Địa chỉ</th>
+                <th>Tuổi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="(key, value) in employee">
+                <td>{{ value.nameNV | uppercase }}</td>
+                <td>{{ value.ngaysinhNV | date:"dd/mm/yyyy" }}</td>
+                <td>{{ value.luong | currency:"VND ":0 }}</td>
+                <td>{{ value.gioitinh }}</td>
+                <td>{{ value.diachi }}</td>
+                <td>{{ value.tuoi }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Bài 2</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Ngày sinh</th>
+                <th>Lương</th>
+                <th>Giới thiệu</th>
+                <th>Địa chỉ</th>
+                <th>Tuổi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="(key, value) in employee | limitTo:4:3">
+                <td>{{ value.nameNV | uppercase }}</td>
+                <td>{{ value.ngaysinhNV | date:"dd/mm/yyyy" }}</td>
+                <td>{{ value.luong | currency:"VND ":0 }}</td>
+                <td>{{ value.gioitinh }}</td>
+                <td>{{ value.diachi }}</td>
+                <td>{{ value.tuoi }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Bài 3</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Ngày sinh</th>
+                <th>Lương</th>
+                <th>Giới thiệu</th>
+                <th>Địa chỉ</th>
+                <th>Tuổi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="(key, value) in employee | orderBy:selectSort ">
+                <td>{{ value.nameNV | uppercase }}</td>
+                <td>{{ value.ngaysinhNV | date:"dd/mm/yyyy" }}</td>
+                <td>{{ value.luong | currency:"VND ":0 }}</td>
+                <td>{{ value.gioitinh }}</td>
+                <td>{{ value.diachi }}</td>
+                <td>{{ value.tuoi }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Bài 4</h1>
+    <select ng-model="selectSort">
+        <option value="" hidden>--Sắp xếp theo lương</option>
+        <option value="+luong">Lương tăng dần</option>
+        <option value="-luong">Lương giảm dần</option>
+    </select>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Ngày sinh</th>
+                <th>Lương</th>
+                <th>Giới thiệu</th>
+                <th>Địa chỉ</th>
+                <th>Tuổi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="(key, value) in employee | orderBy:selectSort ">
+                <td>{{ value.nameNV | uppercase }}</td>
+                <td>{{ value.ngaysinhNV | date:"dd/mm/yyyy" }}</td>
+                <td>{{ value.luong | currency:"VND ":0 }}</td>
+                <td>{{ value.gioitinh | genderStatus }}</td>
+                <td>{{ value.diachi }}</td>
+                <td>{{ value.tuoi }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Bài 5</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Ngày sinh</th>
+                <th>Lương</th>
+                <th>Giới thiệu</th>
+                <th>Địa chỉ</th>
+                <th>Tuổi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="(key, value) in employee | filter:{nameNV: 'Hằng'
+                , diachi: 'Hà nội'}: true ">
+                <td>{{ value.nameNV | uppercase }}</td>
+                <td>{{ value.ngaysinhNV | date:"dd/mm/yyyy" }}</td>
+                <td>{{ value.luong | currency:"VND ":0 }}</td>
+                <td>{{ value.gioitinh | genderStatus }}</td>
+                <td>{{ value.diachi }}</td>
+                <td>{{ value.tuoi }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Bài 6</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Ngày sinh</th>
+                <th>Lương</th>
+                <th>Giới thiệu</th>
+                <th>Địa chỉ</th>
+                <th>Tuổi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="(key, value) in employee | ageStatus: 30 : 40">
+                <td>{{ value.nameNV | uppercase }}</td>
+                <td>{{ value.ngaysinhNV | date:"dd/mm/yyyy" }}</td>
+                <td>{{ value.luong | currency:"VND ":0 }}</td>
+                <td>{{ value.gioitinh | genderStatus }}</td>
+                <td>{{ value.diachi }}</td>
+                <td>{{ value.tuoi }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Bài 7</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th ng-click="sortData('nameNV')">Tên</th>
+                <th ng-click="sortData('ngaysinhNV')">Ngày sinh</th>
+                <th ng-click="sortData('luong')">Lương</th>
+                <th ng-click="sortData('gioitinh')">Giới tính</th>
+                <th ng-click="sortData('diachi')">Địa chỉ</th>
+                <th ng-click="sortData('tuoi')">Tuổi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="(key, value) in employee | orderBy:columnName: reverse">
+                <td>{{ value.nameNV | uppercase }}</td>
+                <td>{{ value.ngaysinhNV | date:"dd/mm/yyyy" }}</td>
+                <td>{{ value.luong | currency:"VND ":0 }}</td>
+                <td>{{ value.gioitinh | genderStatus }}</td>
+                <td>{{ value.diachi }}</td>
+                <td>{{ value.tuoi }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
